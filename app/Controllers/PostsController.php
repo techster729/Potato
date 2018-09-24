@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controllers;
+
+use Core\App;
+
 class PostsController {
 
     public function home()

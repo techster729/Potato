@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Router {
 
     protected $routes = [
@@ -42,6 +44,7 @@ class Router {
 
     public function callAction($controller, $action)
     {
+        $controller = "App\\Controllers\\{$controller}";
         $controller = new $controller;
         if ( !method_exists($controller, $action)) {
             die('No action defined for the request');
